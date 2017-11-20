@@ -20,8 +20,8 @@ public class CreateDemo {
         try {
 
             Instructor instructor = new Instructor("John", "Doe", "doe@john.com");
-            //InstructorDetail instructorDetail = new InstructorDetail();//"channel url", "sport");
-            //instructor.setInstructorDetailId(instructorDetail);
+            InstructorDetail instructorDetail = new InstructorDetail("channel url", "sport");
+            instructor.setInstructorDetailId(instructorDetail);
 
             session.beginTransaction();
 

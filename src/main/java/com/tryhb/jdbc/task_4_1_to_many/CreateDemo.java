@@ -1,10 +1,11 @@
-package com.tryhb.jdbc.task_3_1_to_1_bidirectional;
+package com.tryhb.jdbc.task_4_1_to_many;
 
+import com.tryhb.jdbc.task_3_1_to_1_bidirectional.InstructorDetail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class DeleteDemo {
+public class CreateDemo {
 
 
     public static void main(String[] args) {
@@ -18,25 +19,21 @@ public class DeleteDemo {
         Session session = sessionFactory.getCurrentSession();
         try {
 
-
             session.beginTransaction();
 
-            //Instructors
-            InstructorDetail instructorDetail = session.get(InstructorDetail.class, 9);
-            System.out.println("Instructor" + instructorDetail.toString());
-            System.out.println("Related instructor:" + instructorDetail.getInstructor().toString());
+            Instructor instructor = new Instructor("John", "Du", "doe@john.com");
+            InstructorDetail instructorDetail = new InstructorDetail("channel url", "sport");
+            instructor.setInstructorDetail(instructorDetail);
 
-            if (instructorDetail != null) {
-                session.delete(instructorDetail);
-            }
-
-
+            session.save(instructor);
 
             session.getTransaction().commit();
         } finally {
-            session.close();
             sessionFactory.close();
         }
 
     }
+
+
+
 }
