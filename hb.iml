@@ -12,6 +12,10 @@
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/out" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/com/tryhb/jdbc/task1_map_table" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/com/tryhb/jdbc/task2_one_to_1_mapping" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/com/tryhb/jdbc/task2_one_to_1_mapping/entiry" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/com/tryhb/jdbc/task_3_1_to_1_bidirectional" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
